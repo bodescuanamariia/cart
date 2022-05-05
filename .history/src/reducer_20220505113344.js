@@ -50,6 +50,6 @@ const reducer = (state, action) => {
       .filter((cartItem) => cartItem.amount !== 0);
     return { ...state, cart: tempCart };
   }
-  throw new Error("No matching action type");
+  return state;
 };
 export default reducer;

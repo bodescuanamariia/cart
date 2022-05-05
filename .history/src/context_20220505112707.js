@@ -20,6 +20,12 @@ const AppProvider = ({ children }) => {
   const removeItem = (id) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
+  const increase = (id) => {
+    dispatch({ type: "INCREASE", payload: id });
+  };
+  const decrease = (id) => {
+    dispatch({ type: "DECREASE", payload: id });
+  };
   const fetchData = async () => {
     dispatch({ type: "LOADING" });
     const response = await fetch(url);
@@ -44,6 +50,8 @@ const AppProvider = ({ children }) => {
         ...state,
         clearCart,
         removeItem,
+        increase,
+        decrease,
         toggleAmount,
       }}
     >
