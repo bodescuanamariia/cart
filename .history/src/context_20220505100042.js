@@ -18,7 +18,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CLEAR_CART" });
   };
   const removeItem = (id) => {
-    dispatch({ type: "REMOVE_ITEM", payload: id });
+    dispatch({ type: "REMOVE_ITEM" });
   };
 
   return (
@@ -26,7 +26,6 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         clearCart,
-        removeItem,
       }}
     >
       {children}

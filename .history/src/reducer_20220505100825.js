@@ -3,10 +3,7 @@ const reducer = (state, action, id) => {
     return { ...state, cart: [] };
   }
   if (action.type === "REMOVE_ITEM") {
-    return {
-      ...state,
-      cart: state.cart.filter((cartItem) => cartItem.id !== action.payload),
-    };
+    return .filter((item) => item.id !== id);
   }
   return state;
 };
