@@ -29,7 +29,7 @@ const AppProvider = ({ children }) => {
   const fetchData = async () => {
     dispatch({ type: "LOADING" });
     const response = await fetch(url);
-    const cart = await response.json();
+    const cart = response.json();
     dispatch({ type: "DISPLAY_ITEMS", payload: cart });
   };
 
