@@ -7,17 +7,17 @@ const AppContext = React.createContext();
 const initialState = {
   loading: false,
   cart: cartItems,
-  total: 0,
-  amount: 0,
-};
+  total : 0,
+  amount : 0,
+}
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(initialState);
 
   return (
     <AppContext.Provider
       value={{
-        ...state,
+        cart,
       }}
     >
       {children}
