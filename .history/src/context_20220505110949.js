@@ -27,9 +27,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "DECREASE", payload: id });
   };
 
-  useEffect(() => {
-    dispatch({ type: "GET_TOTALS" });
-  }, [state.cart]);
+  useEffect(() => {}, [state.cart]);
   return (
     <AppContext.Provider
       value={{
@@ -44,6 +42,7 @@ const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
+// make sure use
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    dispatch({ type: "GET_TOTALS" });
+    console.log("hello");
   }, [state.cart]);
   return (
     <AppContext.Provider
@@ -44,6 +44,7 @@ const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
+// make sure use
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };
